@@ -129,14 +129,6 @@
     <developerConnection>scm:svn:https://svn.codehaus.org/jetty/pom/trunk</developerConnection>
     <url>http://fisheye.codehaus.org/viewrep/jetty/</url>
   </scm>
-  <plugins>
-    <plugin>
-      <artifactId>maven-release-plugin</artifactId>
-      <configuration>
-        <tagBase>https://svn.codehaus.org/jetty/pom/tags</tagBase>
-      </configuration>
-    </plugin>
-  </plugins>
   <build>
     <extensions>
       <extension>
@@ -155,8 +147,77 @@
         <version>${maven-wagon-version}</version>
       </extension>
     </extensions>
+    <plugins>
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <configuration>
+          <tagBase>https://svn.codehaus.org/jetty/pom/tags</tagBase>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
   <properties>
     <maven-wagon-version>1.0-beta-2</maven-wagon-version>
   </properties>
+  <profiles>
+    <!-- START SNIPPET: release-profile -->
+    <profile>
+      <id>release</id>
+      <build>
+        <plugins>
+          <!-- We want to sign the artifact, the POM, and all attached artifacts -->
+          <!-- activate this when we want to start signing artifacts
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <configuration>
+              <passphrase>${gpg.passphrase}</passphrase>
+            </configuration>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          -->
+          <!-- We want to deploy the artifact to a staging location for perusal -->
+          <plugin>
+            <inherited>true</inherited>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <configuration>
+              <altDeploymentRepository>${deploy.altRepository}</altDeploymentRepository>
+              <updateReleaseInfo>true</updateReleaseInfo>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
