@@ -12,21 +12,45 @@
   </issueManagement>
   <mailingLists>
     <mailingList>
-      <name>Jetty Discuss List</name>
+      <name>Jetty User List</name>
+      <subscribe>http://xircles.codehaus.org/manage_email/user%40jetty.codehaus.org</subscribe>
+      <unsubscribe>http://xircles.codehaus.org/manage_email/user%40jetty.codehaus.org</unsubscribe>
+      <archive>http://archive.jetty.codehaus.org/user</archive>
+    </mailingList>
+    <mailingList>
+      <name>Jetty Developer List</name>
+      <subscribe>http://xircles.codehaus.org/manage_email/dev%40jetty.codehaus.org</subscribe>
+      <unsubscribe>http://xircles.codehaus.org/manage_email/dev%40jetty.codehaus.org</unsubscribe>
+      <archive>http://archive.jetty.codehaus.org/dev</archive>
+    </mailingList>
+    <mailingList>
+      <name>Jetty Announce List</name>
+      <subscribe>http://xircles.codehaus.org/manage_email/announce%40jetty.codehaus.org</subscribe>
+      <unsubscribe>http://xircles.codehaus.org/manage_email/announce%40jetty.codehaus.org</unsubscribe>
+      <archive>http://archive.jetty.codehaus.org/announce</archive>
+    </mailingList>
+    <mailingList>
+      <name>Jetty Commit List</name>
+      <subscribe>http://xircles.codehaus.org/manage_email/scm%40jetty.codehaus.org</subscribe>
+      <unsubscribe>http://xircles.codehaus.org/manage_email/scm%40jetty.codehaus.org</unsubscribe>
+      <archive>http://archive.jetty.codehaus.org/scm</archive>
+    </mailingList>
+    <mailingList>
+      <name>Defunct - Jetty Discuss List</name>
       <archive>http://lists.sourceforge.net/lists/listinfo/jetty-discuss</archive>
       <otherArchives>
         <otherArchive>http://www.nabble.com/Jetty-Discuss-f60.html</otherArchive>
       </otherArchives>
     </mailingList>
     <mailingList>
-      <name>Jetty Support List</name>
+      <name>Defunct - Jetty Support List</name>
       <archive>http://lists.sourceforge.net/lists/listinfo/jetty-support</archive>
       <otherArchives>
         <otherArchive>http://www.nabble.com/Jetty-Support-f61.html</otherArchive>
       </otherArchives>
     </mailingList>
     <mailingList>
-      <name>Jetty Announce List</name>
+      <name>Defunct - Jetty Announce List</name>
       <archive>http://lists.sourceforge.net/lists/listinfo/jetty-announce</archive>
       <otherArchives>
         <otherArchive>http://www.nabble.com/Jetty---Announce-f2649.html</otherArchive>
