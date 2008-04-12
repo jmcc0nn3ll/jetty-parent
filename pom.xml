@@ -149,11 +149,17 @@
     </extensions>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
+        <version>2.0-beta-7</version>
         <configuration>
+          <!-- This element will be overriden by children -->
           <tagBase>https://svn.codehaus.org/jetty/pom/tags</tagBase>
+          <useReleaseProfile>false</useReleaseProfile>
+          <goals>deploy</goals>
+          <arguments>-Pcodehaus-release</arguments>
         </configuration>
-      </plugin>
+        </plugin>
     </plugins>
   </build>
   <properties>
@@ -162,7 +168,7 @@
   <profiles>
     <!-- START SNIPPET: release-profile -->
     <profile>
-      <id>release</id>
+      <id>codehaus-release</id>
       <build>
         <plugins>
           <!-- We want to sign the artifact, the POM, and all attached artifacts -->
