@@ -272,5 +272,16 @@
         </plugins>
       </build>
     </profile>
+    <profile>
+      <id>staged</id>
+      <repositories>
+        <!-- TODO alter to shared staging location -->
+        <repository>
+          <id>staging-repository</id>
+          <name>Staging Repository</name>
+          <url>http://codehaus.org/~jesse/staging-repository</url>
+        </repository>
+      </repositories>
+    </profile>
   </profiles>
 </project>
