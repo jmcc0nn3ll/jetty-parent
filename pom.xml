@@ -153,6 +153,9 @@
     <developerConnection>scm:svn:https://svn.codehaus.org/jetty/pom/trunk</developerConnection>
     <url>http://fisheye.codehaus.org/viewrep/jetty/</url>
   </scm>
+  <modules>
+    <module>jetty-build-resources</module>
+  </modules>
   <build>
     <extensions>
       <extension>
@@ -198,7 +201,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
-        <version>2.0-beta-7</version>
         <configuration>
           <tagBase>https://svn.codehaus.org/jetty/pom/tags</tagBase>
           <useReleaseProfile>false</useReleaseProfile>
@@ -206,7 +208,7 @@
           <arguments>-Pcodehaus-release</arguments>
           <preparationGoals>clean install</preparationGoals>
         </configuration>
-        </plugin>
+      </plugin>
     </plugins>
     <pluginManagement>
       <plugins>
@@ -244,7 +246,12 @@
           <groupId>org.apache.maven</groupId>
           <artifactId>maven-release-plugin</artifactId>
           <version>2.0-beta-7</version>
-        </plugin>        
+        </plugin> 
+        <plugin>
+          <groupId>org.apache.maven</groupId>
+          <artifactId>maven-remote-resources-plugin</artifactId>
+          <version>1.0</version>
+        </plugin> 
         <plugin>
           <groupId>org.apache.maven</groupId>
           <artifactId>maven-source-plugin</artifactId>
@@ -323,7 +330,7 @@
           </plugin>
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
+            <artifactId>maven-javadoc-plugin</artifactId>                 
             <executions>
               <execution>
                 <id>attach-javadocs</id>
