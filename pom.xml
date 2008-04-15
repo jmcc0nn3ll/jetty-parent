@@ -153,6 +153,9 @@
     <developerConnection>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-1</developerConnection>
     <url>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-1</url>
   </scm>
+  <modules>
+    <module>jetty-build-resources</module>
+  </modules>
   <build>
     <extensions>
       <extension>
@@ -198,7 +201,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
-        <version>2.0-beta-7</version>
         <configuration>
           <tagBase>https://svn.codehaus.org/jetty/pom/tags</tagBase>
           <useReleaseProfile>false</useReleaseProfile>
@@ -206,7 +208,7 @@
           <arguments>-Pcodehaus-release</arguments>
           <preparationGoals>clean install</preparationGoals>
         </configuration>
-        </plugin>
+      </plugin>
     </plugins>
     <pluginManagement>
       <plugins>
@@ -244,7 +246,17 @@
           <groupId>org.apache.maven</groupId>
           <artifactId>maven-release-plugin</artifactId>
           <version>2.0-beta-7</version>
-        </plugin>        
+        </plugin> 
+        <plugin>
+          <groupId>org.apache.maven</groupId>
+          <artifactId>maven-remote-resources-plugin</artifactId>
+          <version>1.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>2.0-beta-6</version>
+        </plugin>
         <plugin>
           <groupId>org.apache.maven</groupId>
           <artifactId>maven-source-plugin</artifactId>
@@ -305,7 +317,7 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-deploy-plugin</artifactId>
             <configuration>
-              <altDeploymentRepository>${deploy.altRepository}</altDeploymentRepository>
+              <altDeploymentRepository>mortbay.staging::default::scpexe://www.mortbay.org/home/ftp/pub/staging</altDeploymentRepository>
               <updateReleaseInfo>true</updateReleaseInfo>
             </configuration>
           </plugin>
@@ -323,7 +335,7 @@
           </plugin>
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
+            <artifactId>maven-javadoc-plugin</artifactId>                 
             <executions>
               <execution>
                 <id>attach-javadocs</id>
@@ -339,11 +351,10 @@
     <profile>
       <id>staged</id>
       <repositories>
-        <!-- TODO alter to shared staging location -->
         <repository>
           <id>jetty-staging-repository</id>
           <name>Jetty Staging Repository</name>
-          <url>http://codehaus.org/~jesse/staging-repository</url>
+          <url>http://www.mortbay.org/staging/</url>
         </repository>
       </repositories>
     </profile>
