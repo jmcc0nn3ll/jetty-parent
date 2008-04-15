@@ -4,7 +4,7 @@
   <artifactId>jetty-parent</artifactId>
   <packaging>pom</packaging>
   <name>Jetty :: Parent</name>
-  <version>2-SNAPSHOT</version>
+  <version>1-SNAPSHOT</version>
   <url>http://jetty.mortbay.org</url>
   <issueManagement>
     <system>jira</system>
@@ -317,7 +317,7 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-deploy-plugin</artifactId>
             <configuration>
-              <altDeploymentRepository>${deploy.altRepository}</altDeploymentRepository>
+              <altDeploymentRepository>mortbay.staging::default::scpexe://www.mortbay.org/home/ftp/pub/staging</altDeploymentRepository>
               <updateReleaseInfo>true</updateReleaseInfo>
             </configuration>
           </plugin>
@@ -351,11 +351,10 @@
     <profile>
       <id>staged</id>
       <repositories>
-        <!-- TODO alter to shared staging location -->
         <repository>
           <id>jetty-staging-repository</id>
           <name>Jetty Staging Repository</name>
-          <url>http://codehaus.org/~jesse/staging-repository</url>
+          <url>http://www.mortbay.org/staging/</url>
         </repository>
       </repositories>
     </profile>
