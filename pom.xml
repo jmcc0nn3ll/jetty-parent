@@ -154,9 +154,6 @@
     <developerConnection>scm:svn:https://svn.codehaus.org/jetty/pom/trunk</developerConnection>
     <url>http://fisheye.codehaus.org/viewrep/jetty/</url>
   </scm>
-  <modules>
-    <module>jetty-build-resources</module>
-  </modules>
   <build>
     <extensions>
       <extension>
