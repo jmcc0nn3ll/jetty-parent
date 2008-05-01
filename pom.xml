@@ -4,7 +4,7 @@
   <artifactId>jetty-parent</artifactId>
   <packaging>pom</packaging>
   <name>Jetty :: Administrative Parent</name>
-  <version>3</version>
+  <version>4-SNAPSHOT</version>
   <url>http://jetty.mortbay.org</url>
   <issueManagement>
     <system>jira</system>
@@ -150,9 +150,9 @@
     </site>
   </distributionManagement>
   <scm>
-    <connection>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-3</connection>
-    <developerConnection>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-3</developerConnection>
-    <url>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-3</url>
+    <connection>scm:svn:https://svn.codehaus.org/jetty/pom/trunk</connection>
+    <developerConnection>scm:svn:https://svn.codehaus.org/jetty/pom/trunk</developerConnection>
+    <url>http://fisheye.codehaus.org/viewrep/jetty/</url>
   </scm>
   <build>
     <extensions>
