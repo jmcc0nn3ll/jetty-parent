@@ -6,7 +6,7 @@
     <version>2</version>
   </parent>
   <artifactId>jetty-build-resources</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>Jetty :: Build Resources</name>
   <description>Common Build Resources</description> 
   <build> 
