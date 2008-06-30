@@ -121,6 +121,12 @@
       <organizationUrl>http://www.webtide.com</organizationUrl>
       <timezone>-6</timezone>
     </developer>
+    <developer>
+      <id>djencks</id>
+      <name>David Jencks</name>
+      <email>david_jencks@yahoo.com</email>
+      <organization>IBM</organization>
+    </developer>
   </developers>
   <licenses>
     <license>
