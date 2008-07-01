@@ -127,6 +127,13 @@
       <email>david_jencks@yahoo.com</email>
       <organization>IBM</organization>
     </developer>
+    <developer>
+      <id>dyu</id>
+      <name>David Yu</name>
+      <email>david.yu.ftw@gmail.com</email>
+      <organization>Webtide</organization>
+      <organizationUrl>http://www.webtide.com</organizationUrl>
+    </developer>    
   </developers>
   <licenses>
     <license>
