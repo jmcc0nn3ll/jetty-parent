@@ -154,11 +154,6 @@
       <name>Jetty Snapshot Repository</name>
       <url>dav:https://dav.codehaus.org/snapshots.repository/jetty/</url>
     </snapshotRepository>
-    <site>
-      <id>codehaus.org</id>
-      <name>Jetty Website</name>
-      <url>dav:https://dav.codehaus.org/jetty/</url>
-    </site>
   </distributionManagement>
   <scm>
     <connection>scm:svn:https://svn.codehaus.org/jetty/pom/trunk</connection>
@@ -179,12 +174,11 @@
       </extension>
       <extension>
         <groupId>org.apache.maven.wagon</groupId>
-        <artifactId>wagon-webdav</artifactId>
+        <artifactId>wagon-webdav-jackrabbit</artifactId>
         <version>${maven-wagon-version}</version>
       </extension>
     </extensions>
     <plugins>
-      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
         <version>1.0-alpha-3</version>
@@ -295,7 +289,7 @@
     </pluginManagement>
   </build>
   <properties>
-    <maven-wagon-version>1.0-beta-2</maven-wagon-version>
+    <maven-wagon-version>1.0-beta-4</maven-wagon-version>
   </properties>
   <profiles>
     <profile>
