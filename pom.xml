@@ -4,8 +4,9 @@
   <artifactId>jetty-parent</artifactId>
   <packaging>pom</packaging>
   <name>Jetty :: Administrative Parent</name>
-  <version>5-SNAPSHOT</version>
+  <version>5</version>
   <url>http://jetty.mortbay.org</url>
+  <inceptionYear>1995</inceptionYear>
   <issueManagement>
     <system>jira</system>
     <url>http://jira.codehaus.org/browse/JETTY</url>
@@ -156,9 +157,9 @@
     </snapshotRepository>
   </distributionManagement>
   <scm>
-    <connection>scm:svn:https://svn.codehaus.org/jetty/pom/trunk</connection>
-    <developerConnection>scm:svn:https://svn.codehaus.org/jetty/pom/trunk</developerConnection>
-    <url>http://fisheye.codehaus.org/viewrep/jetty/</url>
+    <connection>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-5</connection>
+    <developerConnection>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-5</developerConnection>
+    <url>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-5</url>
   </scm>
   <build>
     <extensions>
@@ -179,6 +180,7 @@
       </extension>
     </extensions>
     <plugins>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
         <version>1.0-alpha-3</version>
@@ -243,7 +245,7 @@
         <plugin>
           <groupId>org.apache.maven</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>2.2</version>
+          <version>2.5</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven</groupId>
