@@ -176,7 +176,7 @@
       <extension>
         <groupId>org.apache.maven.wagon</groupId>
         <artifactId>wagon-webdav-jackrabbit</artifactId>
-        <version>1.0-beta-4</version>
+        <version>${maven-wagon-version}</version>
       </extension>
     </extensions>
     <plugins>
