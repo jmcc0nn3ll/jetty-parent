@@ -4,7 +4,7 @@
   <artifactId>jetty-parent</artifactId>
   <packaging>pom</packaging>
   <name>Jetty :: Administrative Parent</name>
-  <version>6-SNAPSHOT</version>
+  <version>6</version>
   <url>http://jetty.mortbay.org</url>
   <inceptionYear>1995</inceptionYear>
   <issueManagement>
@@ -157,9 +157,9 @@
     </snapshotRepository>
   </distributionManagement>
   <scm>
-    <connection>scm:svn:https://svn.codehaus.org/jetty/pom/trunk</connection>
-    <developerConnection>scm:svn:https://svn.codehaus.org/jetty/pom/trunk</developerConnection>
-    <url>http://fisheye.codehaus.org/viewrep/jetty/</url>
+    <connection>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-6</connection>
+    <developerConnection>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-6</developerConnection>
+    <url>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-6</url>
   </scm>
   <build>
     <extensions>
@@ -175,7 +175,7 @@
       </extension>
       <extension>
         <groupId>org.apache.maven.wagon</groupId>
-        <artifactId>wagon-webdav-jackrabbit</artifactId>
+        <artifactId>wagon-webdav</artifactId>
         <version>${maven-wagon-version}</version>
       </extension>
     </extensions>
@@ -193,8 +193,7 @@
             <configuration>
               <rules>
                 <requireMavenVersion>
-                  <!-- 2.0.9 is broken for wagon -->
-                  <version>[2.0.6,),(,2.0.9),(2.0.9,)</version>
+                  <version>[2.0.6,)</version>
                 </requireMavenVersion>
                 <requireJavaVersion>
                   <version>[1.5,)</version>
@@ -292,7 +291,7 @@
     </pluginManagement>
   </build>
   <properties>
-    <maven-wagon-version>1.0-beta-4</maven-wagon-version>
+    <maven-wagon-version>1.0-beta-2</maven-wagon-version>
   </properties>
   <profiles>
     <profile>
