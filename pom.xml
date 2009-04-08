@@ -6,7 +6,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.mortbay.jetty</groupId>
-  <artifactId>jetty-codehaus-parent</artifactId>
+  <artifactId>jetty-parent</artifactId>
   <packaging>pom</packaging>
   <name>Jetty :: Codehaus Parent</name>
   <version>8-SNAPSHOT</version>
