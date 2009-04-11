@@ -19,13 +19,25 @@
     <url>http://www.mortbay.com</url>
   </organization>
   <scm>
-    <connection>scm:svn:svn+ssh://dev.eclipse.org/svnroot/rt/org.eclipse.jetty/jetty-parent/tags/jetty-parent-8</connection>
-    <developerConnection>scm:svn:svn+ssh://dev.eclipse.org/svnroot/rt/org.eclipse.jetty/jetty-parent/tags/jetty-parent-8</developerConnection>
-    <url>scm:svn:svn+ssh://dev.eclipse.org/svnroot/rt/org.eclipse.jetty/jetty-parent/tags/jetty-parent-8</url>
+    <connection>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-8</connection>
+    <developerConnection>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-8</developerConnection>
+    <url>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-8</url>
   </scm>
   <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <configuration>
+          <tagBase>https://svn.codehaus.org/jetty/pom/tags</tagBase>
+          <useReleaseProfile>false</useReleaseProfile>
+          <goals>deploy</goals>
+          <arguments>-Pcodehaus-release</arguments>
+          <preparationGoals>clean install</preparationGoals>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
-
   <profiles>
     <profile>
       <id>codehaus-release</id>
