@@ -48,14 +48,14 @@
   </pluginRepositories>
   <distributionManagement>
     <repository>
-      <id>codehaus.org</id>
-      <name>Jetty Repository</name>
-      <url>dav:https://dav.codehaus.org/repository/jetty/</url>
+      <id>oss.sonatype.org</id>
+      <name>Jetty Staging Repository</name>
+      <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
     <snapshotRepository>
-      <id>codehaus.org</id>
+      <id>oss.sonatype.org</id>
       <name>Jetty Snapshot Repository</name>
-      <url>dav:https://dav.codehaus.org/snapshots.repository/jetty/</url>
+      <url>http://oss.sonatype.org/content/repositories/jetty-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
   <scm>
