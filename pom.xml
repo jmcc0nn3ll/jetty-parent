@@ -10,7 +10,7 @@
   <packaging>pom</packaging>
   <name>Jetty :: Codehaus Parent</name>
   <description>Parent pom for Jetty at Codehaus</description>
-  <version>11-SNAPSHOT</version>
+  <version>11</version>
   <issueManagement>
     <system>jira</system>
     <url>http://jira.codehaus.org/browse/JETTY</url>
@@ -20,9 +20,9 @@
     <url>http://www.mortbay.com</url>
   </organization>
   <scm>
-    <connection>scm:svn:http://svn.codehaus.org/jetty/pom/trunk</connection>
-    <developerConnection>scm:svn:https://svn.codehaus.org/jetty/pom/trunk</developerConnection>
-    <url>scm:svn:https://svn.codehaus.org/jetty/pom/trunk</url>
+    <connection>scm:svn:http://svn.codehaus.org/jetty/pom/tags/jetty-parent-11</connection>
+    <developerConnection>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-11</developerConnection>
+    <url>scm:svn:https://svn.codehaus.org/jetty/pom/tags/jetty-parent-11</url>
   </scm>
   <build>
     <plugins>
