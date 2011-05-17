@@ -2,7 +2,7 @@
   <parent>
     <groupId>org.eclipse.jetty</groupId>
     <artifactId>jetty-parent</artifactId>
-    <version>14</version>
+    <version>17-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.mortbay.jetty</groupId>
@@ -35,6 +35,7 @@
           <goals>deploy</goals>
           <arguments>-Pcodehaus-release</arguments>
           <preparationGoals>clean install</preparationGoals>
+          <mavenExecutorId>forked-path</mavenExecutorId>
         </configuration>
       </plugin>
     </plugins>
