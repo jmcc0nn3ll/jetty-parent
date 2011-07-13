@@ -2,7 +2,7 @@
   <parent>
     <groupId>org.eclipse.jetty</groupId>
     <artifactId>jetty-parent</artifactId>
-    <version>17</version>
+    <version>18</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.mortbay.jetty</groupId>
@@ -20,9 +20,9 @@
     <url>http://www.mortbay.com</url>
   </organization>
   <scm>
-    <connection>scm:svn:http://svn.codehaus.org/jetty/pom/trunk</connection>
-    <developerConnection>scm:svn:https://svn.codehaus.org/jetty/pom/trunk</developerConnection>
-    <url>scm:svn:https://svn.codehaus.org/jetty/pom/trunk</url>
+    <connection>scm:git:git://git.codehaus.org/jetty-parent.git</connection>
+    <developerConnection>scm:git:ssh://git@git.codehaus.org/jetty-parent.git</developerConnection>
+    <url>scm:git:http://git.codehaus.org/gitweb.cgi?p=jetty-parent.git</url>
   </scm>
   <build>
     <plugins>
@@ -30,7 +30,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
         <configuration>
-          <tagBase>https://svn.codehaus.org/jetty/pom/tags</tagBase>
           <useReleaseProfile>false</useReleaseProfile>
           <goals>deploy</goals>
           <arguments>-Pcodehaus-release</arguments>
