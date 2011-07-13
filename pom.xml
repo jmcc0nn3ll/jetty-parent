@@ -10,7 +10,7 @@
   <packaging>pom</packaging>
   <name>Jetty :: Codehaus Parent</name>
   <description>Parent pom for Jetty at Codehaus</description>
-  <version>12-SNAPSHOT</version>
+  <version>12</version>
   <issueManagement>
     <system>jira</system>
     <url>http://jira.codehaus.org/browse/JETTY</url>
